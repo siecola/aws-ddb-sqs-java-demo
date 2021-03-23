@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "84062ef6-4956-4662-9036-c807748b74f9",
+		"name": "AWS_CDK_Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:8080/api/products",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products by username",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:8080/api/products/matilde",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"matilde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by username and code",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:8080/api/products/matilde/COD1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"matilde",
+						"COD1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"matilde\",\n    \"name\": \"Product1\",\n    \"code\": \"COD1\",\n    \"model\": \"Model1\",\n    \"price\": 10.0\n}"
+				},
+				"url": {
+					"raw": "{{host}}:8080/api/products",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"matilde\",\n    \"name\": \"Product1\",\n    \"code\": \"COD1\",\n    \"model\": \"Model1X\",\n    \"price\": 10.0\n}"
+				},
+				"url": {
+					"raw": "{{host}}:8080/api/products/matilde/COD1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"matilde",
+						"COD1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:8080/api/products/matilde/COD1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"matilde",
+						"COD1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
